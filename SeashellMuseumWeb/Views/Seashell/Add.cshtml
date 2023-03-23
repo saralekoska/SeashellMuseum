@@ -1,0 +1,46 @@
+﻿@model Seashell
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary"> Add Seashell</h2>
+            <hr />
+        </div>
+        @*<div asp-validation-summary="All"></div>*@
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CommonName"></label>
+            <input asp-for="CommonName" class="form-control" />
+            <span asp-validation-for="CommonName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Ocean"></label>
+            <input asp-for="Ocean" class="form-control" />
+            <span asp-validation-for="Ocean" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="MaxSize"></label>
+            <input asp-for="MaxSize" class="form-control" />
+            <span asp-validation-for="MaxSize" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Variety"></label>
+            <input asp-for="Variety" class="form-control" />
+            <span asp-validation-for="Variety" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <a asp-controller="Seashell" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to List
+        </a>
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
